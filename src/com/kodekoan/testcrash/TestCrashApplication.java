@@ -5,9 +5,11 @@ import org.acra.*;
 import org.acra.annotation.*;
 
 @ReportsCrashes(formKey = "",
-formUri="http://http://acra.kodekoan.com/api/submit_acra_report",
+formUri="http://acra.kodekoan.com/api/submit_acra_report",
 formUriBasicAuthLogin = "josephine", 
-formUriBasicAuthPassword = "yrunbys9"
+formUriBasicAuthPassword = "yrunbys9",
+resToastText = R.string.crash_text,
+mode = ReportingInteractionMode.TOAST
 )
 public class TestCrashApplication extends Application {
 	@Override
