@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="custom_rules">
+    
+    <target name="run">
+	    <exec executable="${android.platform.tools.dir}/adb">
+	        <arg value="shell"/>
+	        <arg value="am"/>
+	        <arg value="start"/>
+	        <arg value="-a"/>
+	        <arg value="android.intent.action.MAIN"/>
+	        <arg value="-n"/>
+	        <arg value="com.kodekoan.testcrash/.MainActivity"/>
+	    </exec>
+	</target>
+    <target name="logcat">
+	    <exec executable="${android.platform.tools.dir}/adb">
+	        <arg value="logcat"/>
+	        <arg value="com.kodekoan.testcrash:E"/>
+	        <arg value="*:E"/>
+	    </exec>
+	</target>
+
+</project>
